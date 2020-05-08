@@ -13,12 +13,13 @@ data:{confirm: "Do you want to delete article?"}, :class => 'btn btn-danger' %>
 <% end %>
 <hr>
 
-<h2>Adding comment</h2>
+<h2>Adding a comment</h2>
 <%= form_for([@post, @post.comments.build]) do |f| %>
    <p>
      User<br>
      <%= f.text_field(:username, {:class => 'form-control'}) %>
    </p>
+
    <p>
      Comment text<br>
      <%= f.text_area(:body, {:class => 'form-control'}) %>
