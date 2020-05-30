@@ -11,16 +11,10 @@
   </head>
 
   <body>
-    <% if !user_signed_in? %>
-       <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
-    <% end %>
-
-    <% if user_signed_in? %>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
       <span class="p-2 text-dark"><%= link_to 'AndriiShainohaBlog', home_path %></span>
       <span class="btn btn-outline-primary p-2 text-dark" style="margin-left:1000px;"><%= link_to 'Adding post', new_post_path %></span>
     </div>
-    <% end %>
 
     <div class="container">
       <%= yield %>
